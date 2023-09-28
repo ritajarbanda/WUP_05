@@ -45,10 +45,17 @@ barchartGC(~treatment + infected ,data=drug_user,type ="percent")
 
 The people who ended up with aids, most of them had been given the placebo. With the people who were not given anything, the results are about the same. This shows us that the vaccine is working against contracting aids. 
 
-
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=drug_user)
+rowPerc(table1)
+colPerc(table1)
+```
+
+In the row percents, 25% of the people got aids with the vaccine while 75% had the placebo. With those who did not contract aids, 48% took the drug and 52% took the placebo
 
 ## Inferential Results
 
