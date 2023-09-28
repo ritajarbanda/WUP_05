@@ -9,6 +9,7 @@ output: html_document
 require(tidyverse)
 require(tigerstats)
 triUmp <-read.csv(file="triUmpsal.csv",header=TRUE)
+druguser <- triUmp %>% filter(DrugUser=="yes")
 ```
 
 # Introduction
@@ -20,6 +21,12 @@ A new  preventative aides drug (triUmpsal) is under test in clinical trials. Con
 # Methods
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
+
+```{r include=FALSE}
+drug_user <- filter(triUmp,DrugUser =="yes")
+
+drug_user
+```
 
 # Results
 
